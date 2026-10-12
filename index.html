@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>நாள் 12 | நம் நினைவுகளின் பயணம் ❤️</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <canvas id="particles"></canvas>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <main class="container">
+
+        <!-- SCENE 1: INTRODUCTION -->
+
+        <section id="intro" class="scene">
+
+            <p class="day-label">நாள் 12 · ஒரு அழகான பயணம்</p>
+
+            <div class="door-icon" id="doorIcon">🚪</div>
+
+            <h1>
+                நம் நினைவுகளின்
+                <span>பயணம் ❤️</span>
+            </h1>
+
+            <p class="intro-text">
+                சில தருணங்கள் நினைவுகளாக மாறுகின்றன...
+                சில நினைவுகள் அழகான கதைகளாக மாறுகின்றன...
+                சிலர் நம் வாழ்க்கையில் வந்து,
+                நம் மனதில் என்றும் அழியாத இடத்தைப் பிடித்துவிடுகிறார்கள்.
+            </p>
+
+            <p class="special-text">
+                நித்யா, இன்று உனக்காக ஒரு அழகான
+                நினைவுப் பயணம் காத்திருக்கிறது! 💖
+            </p>
+
+            <button id="openDoorBtn" class="main-button">
+                💌 நினைவுகளின் கதவைத் திற
+            </button>
+
+        </section>
+
+
+        <!-- SCENE 2: SIX MEMORIES -->
+
+        <section id="memoriesSection" class="hidden">
+
+            <p class="day-label">உனக்காகச் சேமித்த நினைவுகள்</p>
+
+            <h2>நம் அழகான நினைவுகள் 📸</h2>
+
+            <p class="section-description">
+                ஒவ்வொரு படத்தையும் தொட்டு,
+                அதற்குள் இருக்கும் செய்தியைத் தெரிந்துகொள். ❤️
+            </p>
+
+            <div class="memory-grid">
+
+                <!-- MEMORY 1 -->
+
+                <button class="memory-card" data-memory="0">
+
+                    <div class="photo-frame">
+                        <img src="./images/memory1.jpg"
+                             alt="நினைவு ஒன்று"
+                             loading="lazy">
+                        <span class="photo-number">01</span>
+                    </div>
+
+                    <h3>நம் கதையின் தொடக்கம் 🌸</h3>
+
+                    <p class="tap-hint">தொட்டுத் திறக்கவும் ✨</p>
+
+                </button>
+
+
+                <!-- MEMORY 2 -->
+
+                <button class="memory-card" data-memory="1">
+
+                    <div class="photo-frame">
+                        <img src="./images/memory2.jpg"
+                             alt="நினைவு இரண்டு"
+                             loading="lazy">
+                        <span class="photo-number">02</span>
+                    </div>
+
+                    <h3>சிறப்பான தருணங்கள் 💗</h3>
+
+                    <p class="tap-hint">தொட்டுத் திறக்கவும் ✨</p>
+
+                </button>
+
+
+                <!-- MEMORY 3 -->
+
+                <button class="memory-card" data-memory="2">
+
+                    <div class="photo-frame">
+                        <img src="./images/memory3.jpg"
+                             alt="நினைவு மூன்று"
+                             loading="lazy">
+                        <span class="photo-number">03</span>
+                    </div>
+
+                    <h3>எதிர்பாராத திருப்பங்கள் 🌙</h3>
+
+                    <p class="tap-hint">தொட்டுத் திறக்கவும் ✨</p>
+
+                </button>
+
+
+                <!-- MEMORY 4 -->
+
+                <button class="memory-card" data-memory="3">
+
+                    <div class="photo-frame">
+                        <img src="./images/memory4.jpg"
+                             alt="நினைவு நான்கு"
+                             loading="lazy">
+                        <span class="photo-number">04</span>
+                    </div>
+
+                    <h3>இன்னும் பல நினைவுகள் ✨</h3>
+
+                    <p class="tap-hint">தொட்டுத் திறக்கவும் ✨</p>
+
+                </button>
+
+
+                <!-- MEMORY 5 -->
+
+                <button class="memory-card" data-memory="4">
+
+                    <div class="photo-frame">
+                        <img src="./images/memory5.jpg"
+                             alt="நினைவு ஐந்து"
+                             loading="lazy">
+                        <span class="photo-number">05</span>
+                    </div>
+
+                    <h3>உன் அழகான கனவுகள் 🌷</h3>
+
+                    <p class="tap-hint">தொட்டுத் திறக்கவும் ✨</p>
+
+                </button>
+
+
+                <!-- MEMORY 6 -->
+
+                <button class="memory-card" data-memory="5">
+
+                    <div class="photo-frame">
+                        <img src="./images/memory6.jpg"
+                             alt="நினைவு ஆறு"
+                             loading="lazy">
+                        <span class="photo-number">06</span>
+                    </div>
+
+                    <h3>உன் மகிழ்ச்சி ❤️</h3>
+
+                    <p class="tap-hint">தொட்டுத் திறக்கவும் ✨</p>
+
+                </button>
+
+            </div>
+
+
+            <!-- MEMORY MESSAGE MODAL -->
+
+            <div id="memoryModal" class="modal hidden">
+
+                <div class="modal-content">
+
+                    <button id="closeMemoryBtn"
+                            class="close-button"
+                            aria-label="மூடு">
+                        ×
+                    </button>
+
+                    <div id="modalIcon" class="modal-icon">❤️</div>
+
+                    <h3 id="modalTitle"></h3>
+
+                    <p id="modalMessage"></p>
+
+                    <button id="nextMemoryBtn" class="main-button">
+                        அடுத்த நினைவுக்குச் செல் 💖
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <p id="memoryProgress" class="progress">
+                0 / 6 நினைவுகள் பார்த்துவிட்டாய்
+            </p>
+
+
+            <!-- LETTER BUTTON -->
+
+            <div id="letterPrompt" class="hidden">
+
+                <div class="letter-icon">💌</div>
+
+                <h3>உனக்காக ஒரு கடிதம்!</h3>
+
+                <p>
+                    ஆறு நினைவுகளையும் பார்த்துவிட்டாய்.
+                    இப்போது உனக்காக எழுதிய கடிதத்தைத் திறக்கலாமா?
+                </p>
+
+                <button id="openLetterBtn" class="main-button">
+                    ❤️ கடிதத்தைத் திற
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- SCENE 3: LOVE LETTER -->
+
+        <section id="letterSection" class="hidden">
+
+            <p class="day-label">என் மனதிலிருந்து உனக்கு</p>
+
+            <div class="envelope" id="envelope">
+
+                <div class="envelope-flap"></div>
+
+                <div class="envelope-body">
+                    💌
+                </div>
+
+            </div>
+
+            <button id="readLetterBtn" class="main-button">
+                கடிதத்தைப் படிக்க ❤️
+            </button>
+
+            <article id="letterContent" class="letter-content hidden">
+
+                <h2>அன்புள்ள நித்யாவுக்கு ❤️</h2>
+
+                <p>
+                    வாழ்க்கை என்பது பல எதிர்பாராத அத்தியாயங்களைக்
+                    கொண்ட ஒரு புத்தகம். சில அத்தியாயங்கள் மகிழ்ச்சியைத்
+                    தரும்; சில அத்தியாயங்கள் நமக்குப் பாடங்களைக்
+                    கற்றுக்கொடுக்கும்.
+                </p>
+
+                <p>
+                    உன்னுடைய வாழ்க்கையில் நீ நினைக்கும் எல்லாக்
+                    கனவுகளும் நனவாக வேண்டும் என்று மனதார விரும்புகிறேன்.
+                </p>
+
+                <p>
+                    நீ ஒரு மருத்துவராக உன் கனவுகளை அடைய வேண்டும்.
+                    உன்னுடைய முயற்சிகள் அனைத்தும் வெற்றியாக மாற வேண்டும்.
+                    எத்தனை சவால்கள் வந்தாலும் உன் மீது நீ வைத்திருக்கும்
+                    நம்பிக்கையை ஒருபோதும் இழந்துவிடாதே.
+                </p>
+
+                <p>
+                    உன்னுடைய வெற்றியில் மகிழ்ச்சியடையவும்,
+                    உன்னுடைய கனவுகளுக்கு ஆதரவாக இருக்கவும்
+                    நான் விரும்புகிறேன்.
+                </p>
+
+                <p>
+                    எப்போதும் சிரித்துக்கொண்டே இரு.
+                    உன்னுடைய மகிழ்ச்சியும் வெற்றியும்
+                    உனக்குக் கிடைக்க வேண்டிய அழகான விஷயங்கள். ❤️
+                </p>
+
+                <p class="letter-signature">
+                    அன்புடன்,<br>
+                    <strong>அமர்நாத் ❤️</strong>
+                </p>
+
+                <button id="finalRevealBtn" class="main-button">
+                    இறுதி ஆச்சரியத்தைப் பார் 🎉
+                </button>
+
+            </article>
+
+        </section>
+
+
+        <!-- SCENE 4: FINAL SURPRISE -->
+
+        <section id="finalSection" class="hidden">
+
+            <div class="final-heart">❤️</div>
+
+            <p class="day-label">நாள் 12 · உனக்காக மட்டும்</p>
+
+            <h2>
+                ஆறு அழகான நினைவுகள்...
+                <span>ஒரு அழகான பயணம்! 💖</span>
+            </h2>
+
+            <p class="final-message">
+                நித்யா, உன்னுடைய வாழ்க்கை அன்பாலும்,
+                மகிழ்ச்சியாலும், வெற்றியாலும் நிறையட்டும்.
+                நீ நினைக்கும் எல்லாக் கனவுகளும் நனவாகட்டும்.
+                எப்போதும் மகிழ்ச்சியாக இரு! ❤️
+            </p>
+
+            <div class="countdown-card">
+
+                <span id="daysLeft">0</span>
+
+                <p>உன் பிறந்தநாளுக்கு இன்னும் நாட்கள் 🎂</p>
+
+            </div>
+
+            <h3 class="final-title">
+                நாள் 12 ஆச்சரியம் நிறைவடைந்தது! 🎉
+            </h3>
+
+            <p class="signature">
+                என்றும் உன் மகிழ்ச்சியை விரும்பும்,<br>
+                <strong>அமர்நாத் ❤️</strong>
+            </p>
+
+            <button id="replayBtn" class="main-button">
+                ❤️ மீண்டும் பார்க்க
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        அன்புடன் உருவாக்கப்பட்டது · 12 / 10 / 2026 ❤️
+    </footer>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
